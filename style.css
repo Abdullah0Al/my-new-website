@@ -30,3 +30,24 @@ main {
 .back-to-top {
   float: right;
 }
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1em 0;
+}
+
+.project-images figure {
+  flex: 1 1 250px;
+  text-align: center;
+  margin: 0;
+}
+
+.project-images img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
