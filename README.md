@@ -1,4 +1,4 @@
-# Abdullah's HW2 Website
+# Abdullah's HW2 & 3 Website
 
 This repository contains the code for a multi-page website built for the CSC457 Internet Technologies course.
 
