@@ -1,23 +1,29 @@
-/* RESET & BASIC */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 html, body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
 
-/* HEADER & NAV */
 header {
   background-color: #343a40;
   color: #fff;
   text-align: center;
   padding: 1rem;
-  border-bottom: 4px solid #2c2f33;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  border-bottom: 0.25rem solid #2c2f33;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  background-color: #2c2f33;
+  padding: 0.5rem 0;
 }
 nav ul {
   list-style: none;
@@ -31,55 +37,62 @@ nav a {
   text-decoration: none;
   font-weight: 500;
   padding: 0.4rem 0.8rem;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
 }
 nav a:hover {
-  background-color: #2c2f33;
-  border-radius: 4px;
+  background-color: #343a40;
+  border-radius: 0.25rem;
 }
 
 /* HEADINGS & TEXT */
 h1 {
   margin: 0;
   font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 600; 
 }
 h2 {
   margin: 1.5rem 0 0.75rem;
   font-size: 1.4rem;
   color: #444;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
 }
 p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  font-weight: 400;
 }
-strong { font-weight: 600; }
+strong {
+  font-weight: 600;
+}
 
-/* SPECIAL CLASSES & IDS */
+/* REUSABLE CLASS & UNIQUE ID */
 .highlight {
   background-color: #cce8d8;
   padding: 0.25rem 0.4rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 #intro {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 0.063rem solid #ddd;
   padding: 1rem;
   margin-bottom: 2rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 /* MAIN & SECTION */
 main {
-  max-width: 960px;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 1.5rem;
 }
 section {
   background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 5px;
+  border: 0.063rem solid #eee;
+  border-radius: 0.3125rem;
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -89,14 +102,16 @@ ul, ol, dl {
   margin: 1rem 0;
   padding-left: 1.5rem;
 }
-li { margin-bottom: 0.5rem; }
+li {
+  margin-bottom: 0.5rem;
+}
 
 /* FOOTER */
 footer {
   background-color: #e9e9e9;
   text-align: center;
   padding: 1rem;
-  border-top: 4px solid #d4d4d4;
+  border-top: 0.25rem solid #d4d4d4;
   position: relative;
 }
 .back-to-top {
@@ -116,40 +131,34 @@ footer {
   flex-wrap: wrap;
   gap: 1rem;
   margin: 1rem 0;
-  justify-content: space-around;
 }
 .project-images figure {
-  flex: 0 1 300px;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  flex: 1 1 15rem;
+  text-align: center;
+  margin: 0;
   background-color: #fcfcfc;
-  border: 1px solid #ddd;
-  border-radius: 4px;
   padding: 0.5rem;
-  box-sizing: border-box;
+  border: 0.063rem solid #ddd;
+  border-radius: 0.25rem;
 }
-.project-images figure img {
-  width: auto;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 4px;
+.project-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
 }
 
 /* FORMS */
 form {
   margin-top: 1rem;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 0.063rem solid #ddd;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 label {
   display: block;
   margin-bottom: 0.3rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 input[type="text"],
 input[type="email"],
@@ -157,25 +166,25 @@ textarea {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 0.063rem solid #ccc;
+  border-radius: 0.25rem;
 }
 button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
 }
 button[type="submit"]:hover {
   background-color: #43a047;
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   nav ul {
     flex-direction: column;
     gap: 1rem;
