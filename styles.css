@@ -1,29 +1,39 @@
+/* Google Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* RESET & GLOBAL */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Font & Base Colors */
 html, body {
   font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
 
+/* HEADER */
 header {
-  background-color: #343a40;
+  /* subtle gradient background */
+  background: linear-gradient(135deg, #3a4046, #2c2f33);
   color: #fff;
   text-align: center;
   padding: 1rem;
-  border-bottom: 0.25rem solid #2c2f33;
+  /* small border below */
+  border-bottom: 0.25rem solid #1e1f21;
+  /* text-shadow + box-shadow for modern look */
   text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* NAVIGATION */
 nav {
   background-color: #2c2f33;
   padding: 0.5rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 nav ul {
   list-style: none;
@@ -50,7 +60,7 @@ h1 {
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  font-weight: 600; 
+  font-weight: 600;
 }
 h2 {
   margin: 1.5rem 0 0.75rem;
@@ -69,7 +79,7 @@ strong {
   font-weight: 600;
 }
 
-/* REUSABLE CLASS & UNIQUE ID */
+/* HIGHLIGHT & INTRO SECTIONS */
 .highlight {
   background-color: #cce8d8;
   padding: 0.25rem 0.4rem;
@@ -77,24 +87,30 @@ strong {
 }
 #intro {
   background-color: #fff;
-  border: 0.063rem solid #ddd;
   padding: 1rem;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
+  border: 0.063rem solid #ddd;
 }
 
-/* MAIN & SECTION */
+/* MAIN & SECTIONS */
 main {
-  max-width: 60rem;
+  max-width: 60rem; 
   margin: 0 auto;
   padding: 1.5rem;
 }
 section {
   background-color: #fff;
-  border: 0.063rem solid #eee;
   border-radius: 0.3125rem;
   padding: 1rem;
   margin-bottom: 2rem;
+  border: 0.063rem solid #eee;
+  /* subtle box-shadow */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+}
+section:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* LISTS */
@@ -140,6 +156,7 @@ footer {
   padding: 0.5rem;
   border: 0.063rem solid #ddd;
   border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 .project-images img {
   max-width: 100%;
@@ -154,6 +171,7 @@ form {
   border: 0.063rem solid #ddd;
   padding: 1rem;
   border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 label {
   display: block;
@@ -182,9 +200,11 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #43a047;
 }
+
+/* GENERIC BUTTONS */
 button,
 .btn {
-  background-color: #4CAF50; /* A green base */
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -195,12 +215,10 @@ button,
   font-weight: 500;
   margin: 1rem 0;
 }
-
 button:hover,
 .btn:hover {
   background-color: #43a047;
 }
-
 button:active,
 .btn:active {
   transform: scale(0.98);
@@ -217,5 +235,8 @@ button:active,
     float: none;
     display: block;
     margin: 1rem auto 0;
+  }
+  section {
+    margin: 1rem;
   }
 }
