@@ -5,51 +5,57 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
-      // Collect references:
+      event.preventDefault(); // always prevent real submission in this demo
+
+      // references
       const nameInput = document.getElementById("name");
       const emailInput = document.getElementById("email");
       const messageInput = document.getElementById("message");
 
-      // Errors:
+      // error spans
       const nameError = document.getElementById("nameError");
       const emailError = document.getElementById("emailError");
       const messageError = document.getElementById("messageError");
 
-      // Reset old errors:
+      // reset old errors
       nameError.textContent = "";
       emailError.textContent = "";
       messageError.textContent = "";
 
       let valid = true;
 
-      // 1. Check Name field
+      // Name check
       if (nameInput.value.trim() === "") {
         nameError.textContent = "Name is required.";
         valid = false;
       }
 
-      // 2. Check Email format
+      // Email check
       const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
       if (emailInput.value.trim() === "") {
         emailError.textContent = "Email is required.";
         valid = false;
       } else if (!emailPattern.test(emailInput.value.trim())) {
-        emailError.textContent = "Please enter a valid email address.";
+        emailError.textContent = "Please enter a valid email.";
         valid = false;
       }
 
-      // 3. Check Message length (at least 10 chars)
+      // Message check
       if (messageInput.value.trim().length < 10) {
-        messageError.textContent = "Message must be at least 10 characters long.";
+        messageError.textContent = "Message must be at least 10 characters.";
         valid = false;
       }
 
-      // If invalid, prevent submission
-      if (!valid) {
-        event.preventDefault();
+      // If everything is valid, show success
+      if (valid) {
+        alert("Your message was successfully sent!");
+        // optionally clear the form
+        contactForm.reset();
       }
     });
   }
+});
+
 
 
   /*******************************************
