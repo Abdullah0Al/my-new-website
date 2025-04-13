@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // If everything is valid, show success
-      if (valid) {
-        alert("Your message was successfully sent!");
-        // optionally clear the form
-        contactForm.reset();
+     if (valid) {
+      const successMsg = document.getElementById("successMsg");
+      successMsg.style.display = "block";
+      contactForm.reset();
       }
     });
   }
