@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const successMsg = document.getElementById("successMsg");
       successMsg.style.display = "block";
       contactForm.reset();
-      }
+      
     });
   }
 });
